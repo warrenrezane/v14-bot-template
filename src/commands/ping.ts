@@ -1,6 +1,6 @@
-import { Command } from "../interfaces/Command";
+import { SlashCommand } from "../interfaces/SlashCommand";
 
-export const Ping: Command = {
+export const Ping: SlashCommand = {
   name: "ping",
   description: "Return a ping.",
   run: async (client, interaction) => {
