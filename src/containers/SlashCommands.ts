@@ -1,4 +1,4 @@
-import { Ping } from "../commands/ping";
+import { Ping } from "../commands/slash/ping";
 import { SlashCommand } from "../interfaces/SlashCommand";
 
-export const Commands: SlashCommand[] = [Ping];
+export const SlashCommands: SlashCommand[] = [Ping];

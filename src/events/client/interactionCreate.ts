@@ -1,15 +1,17 @@
 import { Client, Interaction } from "discord.js";
-import { Commands } from "../../containers/Commands";
+import { SlashCommands } from "../../containers/SlashCommands";
 
 export default (client: Client): void => {
   client.on("interactionCreate", async (interaction: Interaction) => {
     if (interaction.isChatInputCommand()) {
-      const command = Commands.find((c) => c.name === interaction.commandName);
+      const slashCommand = SlashCommands.find(
+        (command) => command.name === interaction.commandName
+      );
 
-      if (!command) return;
+      if (!slashCommand) return;
 
       try {
-        command.run(client, interaction);
+        slashCommand.run(client, interaction);
       } catch (error) {
         console.error(error);
       }

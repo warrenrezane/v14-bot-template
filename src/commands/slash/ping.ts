@@ -1,4 +1,4 @@
-import { SlashCommand } from "../interfaces/SlashCommand";
+import { SlashCommand } from "../../interfaces/SlashCommand";
 
 export const Ping: SlashCommand = {
   name: "ping",

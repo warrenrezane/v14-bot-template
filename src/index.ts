@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { Client, Partials, GatewayIntentBits } from "discord.js";
+import { Client, Partials, GatewayIntentBits, ActivityType } from "discord.js";
 import ready from "./events/client/ready";
 import interactionCreate from "./events/client/interactionCreate";
 import Time from "./functions/Time";
@@ -23,6 +23,16 @@ export const client = new Client({
     Partials.ThreadMember,
     Partials.User,
   ],
+  // presence: {
+  //   status: "online",
+  //   activities: [
+  //     {
+  //       name: "<Name>",
+  //       type: ActivityType.Watching,
+  //       url: "https://frambulan.com",
+  //     },
+  //   ],
+  // },
 });
 
 // Client Events
